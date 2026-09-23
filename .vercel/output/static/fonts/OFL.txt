@@ -1,0 +1,4 @@
+Cinzel copyright 2012 The Cinzel Project Authors (Natanael Gama).
+Outfit copyright 2021 The Outfit Project Authors.
+Both families are licensed under the SIL Open Font License 1.1.
+https://openfontlicense.org

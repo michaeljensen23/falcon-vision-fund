@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body { margin: 0; background: #2a2a2a; }
+    .row { display: flex; gap: 18px; padding: 18px; align-items: flex-end; flex-wrap: wrap; }
+    .cell { display: flex; flex-direction: column; align-items: center; gap: 6px; color: #bbb; font: 11px/1 sans-serif; }
+    .s16 { width: 16px; height: 16px; image-rendering: auto; }
+    .s32 { width: 32px; height: 32px; }
+    .s64 { width: 64px; height: 64px; }
+    .onwhite { background: #f7f1e4; padding: 8px; }
+  </style>
+</head>
+<body>
+<div class="row">
+
+<!-- G: angular profile, no eye, big beak -->
+<div class="cell">
+  <svg class="s64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#0B1520"/>
+    <path fill="#C4A05A" d="M6.5 19 L9 9.5 L17 6.5 L22.5 10 L29.5 12.2 L23.5 14.2 L26.2 17.8 L20.5 15.2 L18 22 L10.5 23.2 Z"/>
+  </svg>
+  <span>G angular</span>
+</div>
+
+<!-- H: smoother profile, no eye, bigger beak -->
+<div class="cell">
+  <svg class="s64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#0B1520"/>
+    <path fill="#C4A05A" d="M7 18.5C7.2 11.4 12 6.6 18.4 7.2c3 .3 5.4 2 6.4 4.4l5.2 1.4-4.2 2c1.4 1.2 1.6 3.4 0 5L21.6 17c-1.8 4.2-6 6.4-10.6 5.4C8.4 21.6 7 20.2 7 18.5Z"/>
+  </svg>
+  <span>H smooth</span>
+</div>
+
+<!-- I: gold ring seal + profile -->
+<div class="cell">
+  <svg class="s64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#0B1520"/>
+    <circle cx="16" cy="16" r="11.2" fill="none" stroke="#C4A05A" stroke-width="1.8"/>
+    <path fill="#C4A05A" d="M9.2 17.6C9.4 12.4 13 8.8 17.6 9.2c2.2.2 4 1.6 4.8 3.4l3.8 1-3.2 1.4c.8.8 1 2.2 0 3.4L19.6 16.4c-1.4 3-4.6 4.6-7.8 3.8-1.6-.4-2.6-1.4-2.6-2.6Z"/>
+  </svg>
+  <span>I seal</span>
+</div>
+
+<!-- J: F monogram with gold bar -->
+<div class="cell">
+  <svg class="s64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#0B1520"/>
+    <path fill="#C4A05A" d="M10 7h13.2v3.4H14.6v3.4h7.2v3.2h-7.2V25H10V7z"/>
+  </svg>
+  <span>J F slab</span>
+</div>
+
+<!-- K: diving falcon chevron, bolder -->
+<div class="cell">
+  <svg class="s64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#0B1520"/>
+    <path fill="#C4A05A" d="M16 5.2 27.4 23.2h-6.2L16 14.4 10.8 23.2H4.6Z"/>
+  </svg>
+  <span>K peak bold</span>
+</div>
+
+<!-- L: falcon from above (wings + body + beak) -->
+<div class="cell">
+  <svg class="s64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#0B1520"/>
+    <path fill="#C4A05A" d="M16 4.8 18.2 12.2 28.6 14.2 18.2 16.6 16 27.2 13.8 16.6 3.4 14.2 13.8 12.2 Z"/>
+  </svg>
+  <span>L four-point</span>
+</div>
+
+<!-- M: hooked beak only as a bold C-like falcon head -->
+<div class="cell">
+  <svg class="s64" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#0B1520"/>
+    <path fill="#C4A05A" d="M8 16c0-5.6 4.2-10 9.8-10 2.8 0 5.2 1 7 2.6L22.4 12c-1.2-1-2.8-1.6-4.6-1.6-3.6 0-6.2 2.6-6.2 5.6s2.6 5.6 6.2 5.6c1.8 0 3.4-.6 4.6-1.6L24.8 23.4C23 25 20.6 26 17.8 26 12.2 26 8 21.6 8 16z"/>
+    <path fill="#C4A05A" d="M21 13.2h8.2l-4.4 3.2 3.2 4.4-6.2-4.2c.6-1 .8-2.1-.8-3.4z"/>
+  </svg>
+  <span>M C+beak</span>
+</div>
+
+</div>
+
+<div class="row">
+<div class="cell"><svg class="s32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M6.5 19 L9 9.5 L17 6.5 L22.5 10 L29.5 12.2 L23.5 14.2 L26.2 17.8 L20.5 15.2 L18 22 L10.5 23.2 Z"/></svg><span>G32</span></div>
+<div class="cell"><svg class="s32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M7 18.5C7.2 11.4 12 6.6 18.4 7.2c3 .3 5.4 2 6.4 4.4l5.2 1.4-4.2 2c1.4 1.2 1.6 3.4 0 5L21.6 17c-1.8 4.2-6 6.4-10.6 5.4C8.4 21.6 7 20.2 7 18.5Z"/></svg><span>H32</span></div>
+<div class="cell"><svg class="s32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><circle cx="16" cy="16" r="11.2" fill="none" stroke="#C4A05A" stroke-width="1.8"/><path fill="#C4A05A" d="M9.2 17.6C9.4 12.4 13 8.8 17.6 9.2c2.2.2 4 1.6 4.8 3.4l3.8 1-3.2 1.4c.8.8 1 2.2 0 3.4L19.6 16.4c-1.4 3-4.6 4.6-7.8 3.8-1.6-.4-2.6-1.4-2.6-2.6Z"/></svg><span>I32</span></div>
+<div class="cell"><svg class="s32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M10 7h13.2v3.4H14.6v3.4h7.2v3.2h-7.2V25H10V7z"/></svg><span>J32</span></div>
+<div class="cell"><svg class="s32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M16 5.2 27.4 23.2h-6.2L16 14.4 10.8 23.2H4.6Z"/></svg><span>K32</span></div>
+<div class="cell"><svg class="s32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M16 4.8 18.2 12.2 28.6 14.2 18.2 16.6 16 27.2 13.8 16.6 3.4 14.2 13.8 12.2 Z"/></svg><span>L32</span></div>
+<div class="cell"><svg class="s32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M8 16c0-5.6 4.2-10 9.8-10 2.8 0 5.2 1 7 2.6L22.4 12c-1.2-1-2.8-1.6-4.6-1.6-3.6 0-6.2 2.6-6.2 5.6s2.6 5.6 6.2 5.6c1.8 0 3.4-.6 4.6-1.6L24.8 23.4C23 25 20.6 26 17.8 26 12.2 26 8 21.6 8 16z"/><path fill="#C4A05A" d="M21 13.2h8.2l-4.4 3.2 3.2 4.4-6.2-4.2c.6-1 .8-2.1-.8-3.4z"/></svg><span>M32</span></div>
+</div>
+
+<div class="row">
+<div class="cell"><svg class="s16" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M6.5 19 L9 9.5 L17 6.5 L22.5 10 L29.5 12.2 L23.5 14.2 L26.2 17.8 L20.5 15.2 L18 22 L10.5 23.2 Z"/></svg><span>G16</span></div>
+<div class="cell"><svg class="s16" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M7 18.5C7.2 11.4 12 6.6 18.4 7.2c3 .3 5.4 2 6.4 4.4l5.2 1.4-4.2 2c1.4 1.2 1.6 3.4 0 5L21.6 17c-1.8 4.2-6 6.4-10.6 5.4C8.4 21.6 7 20.2 7 18.5Z"/></svg><span>H16</span></div>
+<div class="cell"><svg class="s16" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><circle cx="16" cy="16" r="11.2" fill="none" stroke="#C4A05A" stroke-width="1.8"/><path fill="#C4A05A" d="M9.2 17.6C9.4 12.4 13 8.8 17.6 9.2c2.2.2 4 1.6 4.8 3.4l3.8 1-3.2 1.4c.8.8 1 2.2 0 3.4L19.6 16.4c-1.4 3-4.6 4.6-7.8 3.8-1.6-.4-2.6-1.4-2.6-2.6Z"/></svg><span>I16</span></div>
+<div class="cell"><svg class="s16" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M10 7h13.2v3.4H14.6v3.4h7.2v3.2h-7.2V25H10V7z"/></svg><span>J16</span></div>
+<div class="cell"><svg class="s16" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M16 5.2 27.4 23.2h-6.2L16 14.4 10.8 23.2H4.6Z"/></svg><span>K16</span></div>
+<div class="cell"><svg class="s16" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M16 4.8 18.2 12.2 28.6 14.2 18.2 16.6 16 27.2 13.8 16.6 3.4 14.2 13.8 12.2 Z"/></svg><span>L16</span></div>
+<div class="cell"><svg class="s16" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M8 16c0-5.6 4.2-10 9.8-10 2.8 0 5.2 1 7 2.6L22.4 12c-1.2-1-2.8-1.6-4.6-1.6-3.6 0-6.2 2.6-6.2 5.6s2.6 5.6 6.2 5.6c1.8 0 3.4-.6 4.6-1.6L24.8 23.4C23 25 20.6 26 17.8 26 12.2 26 8 21.6 8 16z"/><path fill="#C4A05A" d="M21 13.2h8.2l-4.4 3.2 3.2 4.4-6.2-4.2c.6-1 .8-2.1-.8-3.4z"/></svg><span>M16</span></div>
+</div>
+</body>
+</html>

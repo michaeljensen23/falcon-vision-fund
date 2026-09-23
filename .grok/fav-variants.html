@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body { margin: 0; background: #333; }
+    .row { display: flex; gap: 16px; padding: 16px; align-items: flex-end; }
+    .cell { display: flex; flex-direction: column; align-items: center; gap: 6px; color: #aaa; font: 11px/1 sans-serif; }
+    .s16 { width: 16px; height: 16px; }
+    .s32 { width: 32px; height: 32px; }
+    .s64 { width: 64px; height: 64px; }
+  </style>
+</head>
+<body>
+  <div class="row" id="row">
+
+    <div class="cell">
+      <svg class="s64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <rect width="32" height="32" rx="6" fill="#0B1520"/>
+        <path fill="#C4A05A" d="M7.4 19.2c.2-6.4 4.2-11.2 10.6-11.4 3.6.1 6.2 2 7 4.8l4.6 1.2-3.6 1.8c1.1 1.2 1.4 3.2-.2 4.8l-3.2-2.6c-2.2 3.8-6.2 5.6-10.4 4.6-2.2-.6-3.4-1.4-3.4-3.2z"/>
+        <circle cx="18.4" cy="12.2" r="1.7" fill="#0B1520"/>
+      </svg>
+      <span>A profile</span>
+    </div>
+
+    <div class="cell">
+      <svg class="s64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <rect width="32" height="32" rx="6" fill="#0B1520"/>
+        <path fill="#C4A05A" d="M16 5.4c5.4 0 9.6 3.6 9.6 9.2 0 2.6-.8 4.6-2.4 6.4l1.8 2.4-3.4-.2c-1.4 1.6-3.4 2.6-5.6 2.6-5.4 0-9.6-3.8-9.6-9.2S10.6 5.4 16 5.4z"/>
+        <path fill="#0B1520" d="M13.4 13.2c0-1.1.8-1.9 1.8-1.9s1.8.8 1.8 1.9-.8 1.9-1.8 1.9-1.8-.8-1.8-1.9zm3.6 0c0-1.1.8-1.9 1.8-1.9s1.8.8 1.8 1.9-.8 1.9-1.8 1.9-1.8-.8-1.8-1.9z"/>
+        <path fill="#0B1520" d="M16 16.2c.7 0 1.4.2 1.8.6l2.4 3.2-4.2-1.1-4.2 1.1 2.4-3.2c.4-.4 1.1-.6 1.8-.6z"/>
+      </svg>
+      <span>B face</span>
+    </div>
+
+    <div class="cell">
+      <svg class="s64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <rect width="32" height="32" rx="6" fill="#0B1520"/>
+        <path fill="#C4A05A" d="M8 23 L16 6.5 L24 23 L20.6 23 L16 13.2 L11.4 23 Z"/>
+        <path fill="#C4A05A" d="M16 14.8 L26 20.4 L24.2 22.6 L16 18.2 L7.8 22.6 L6 20.4 Z"/>
+      </svg>
+      <span>C chevron</span>
+    </div>
+
+    <div class="cell">
+      <svg class="s64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <rect width="32" height="32" rx="6" fill="#0B1520"/>
+        <path fill="#C4A05A" d="M9.2 7.2h8.6c3.8 0 6.4 2.2 6.4 5.6 0 2.6-1.4 4.4-3.8 5.2L26.6 25h-5.2l-5.4-6.6H14.4V25H9.2V7.2zm5.2 4.2v5.2h3.2c1.8 0 2.8-.8 2.8-2.6s-1-2.6-2.8-2.6H14.4z"/>
+      </svg>
+      <span>D F</span>
+    </div>
+
+    <div class="cell">
+      <svg class="s64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <rect width="32" height="32" rx="6" fill="#0B1520"/>
+        <path fill="#C4A05A" d="M6.8 17.6c.6-5.8 5-10.4 11.2-10.4 2.4 0 4.4.6 6 1.8l4.4-2.2v6.4l-2.2.4c.4.8.6 1.8.6 2.8 0 4.8-3.6 8.2-8.6 8.2-3.2 0-5.6-1.2-7.4-3.2L6.6 23.6 6.8 17.6z"/>
+        <circle cx="16.6" cy="13.2" r="1.8" fill="#0B1520"/>
+        <path fill="#0B1520" d="M22.2 11.2c.8.4 1.6 1.2 2 2.2l3.4.6v-4.2l-3.2 1.2c-.6-.2-1.4-.2-2.2.2z"/>
+      </svg>
+      <span>E dive</span>
+    </div>
+
+    <div class="cell">
+      <svg class="s64" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <rect width="32" height="32" rx="6" fill="#0B1520"/>
+        <path fill="#C4A05A" d="M5.5 22.5 16 6.8 26.5 22.5 22.8 22.5 16 11.8 9.2 22.5 Z"/>
+      </svg>
+      <span>F peak</span>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="cell"><svg class="s32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M7.4 19.2c.2-6.4 4.2-11.2 10.6-11.4 3.6.1 6.2 2 7 4.8l4.6 1.2-3.6 1.8c1.1 1.2 1.4 3.2-.2 4.8l-3.2-2.6c-2.2 3.8-6.2 5.6-10.4 4.6-2.2-.6-3.4-1.4-3.4-3.2z"/><circle cx="18.4" cy="12.2" r="1.7" fill="#0B1520"/></svg><span>A32</span></div>
+    <div class="cell"><svg class="s32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M16 5.4c5.4 0 9.6 3.6 9.6 9.2 0 2.6-.8 4.6-2.4 6.4l1.8 2.4-3.4-.2c-1.4 1.6-3.4 2.6-5.6 2.6-5.4 0-9.6-3.8-9.6-9.2S10.6 5.4 16 5.4z"/><path fill="#0B1520" d="M13.4 13.2c0-1.1.8-1.9 1.8-1.9s1.8.8 1.8 1.9-.8 1.9-1.8 1.9-1.8-.8-1.8-1.9zm3.6 0c0-1.1.8-1.9 1.8-1.9s1.8.8 1.8 1.9-.8 1.9-1.8 1.9-1.8-.8-1.8-1.9z"/><path fill="#0B1520" d="M16 16.2c.7 0 1.4.2 1.8.6l2.4 3.2-4.2-1.1-4.2 1.1 2.4-3.2c.4-.4 1.1-.6 1.8-.6z"/></svg><span>B32</span></div>
+    <div class="cell"><svg class="s32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M8 23 L16 6.5 L24 23 L20.6 23 L16 13.2 L11.4 23 Z"/><path fill="#C4A05A" d="M16 14.8 L26 20.4 L24.2 22.6 L16 18.2 L7.8 22.6 L6 20.4 Z"/></svg><span>C32</span></div>
+    <div class="cell"><svg class="s32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M9.2 7.2h8.6c3.8 0 6.4 2.2 6.4 5.6 0 2.6-1.4 4.4-3.8 5.2L26.6 25h-5.2l-5.4-6.6H14.4V25H9.2V7.2zm5.2 4.2v5.2h3.2c1.8 0 2.8-.8 2.8-2.6s-1-2.6-2.8-2.6H14.4z"/></svg><span>D32</span></div>
+    <div class="cell"><svg class="s32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M6.8 17.6c.6-5.8 5-10.4 11.2-10.4 2.4 0 4.4.6 6 1.8l4.4-2.2v6.4l-2.2.4c.4.8.6 1.8.6 2.8 0 4.8-3.6 8.2-8.6 8.2-3.2 0-5.6-1.2-7.4-3.2L6.6 23.6 6.8 17.6z"/><circle cx="16.6" cy="13.2" r="1.8" fill="#0B1520"/><path fill="#0B1520" d="M22.2 11.2c.8.4 1.6 1.2 2 2.2l3.4.6v-4.2l-3.2 1.2c-.6-.2-1.4-.2-2.2.2z"/></svg><span>E32</span></div>
+    <div class="cell"><svg class="s32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M5.5 22.5 16 6.8 26.5 22.5 22.8 22.5 16 11.8 9.2 22.5 Z"/></svg><span>F32</span></div>
+  </div>
+
+  <div class="row">
+    <div class="cell"><svg class="s16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M7.4 19.2c.2-6.4 4.2-11.2 10.6-11.4 3.6.1 6.2 2 7 4.8l4.6 1.2-3.6 1.8c1.1 1.2 1.4 3.2-.2 4.8l-3.2-2.6c-2.2 3.8-6.2 5.6-10.4 4.6-2.2-.6-3.4-1.4-3.4-3.2z"/><circle cx="18.4" cy="12.2" r="1.7" fill="#0B1520"/></svg><span>A16</span></div>
+    <div class="cell"><svg class="s16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M16 5.4c5.4 0 9.6 3.6 9.6 9.2 0 2.6-.8 4.6-2.4 6.4l1.8 2.4-3.4-.2c-1.4 1.6-3.4 2.6-5.6 2.6-5.4 0-9.6-3.8-9.6-9.2S10.6 5.4 16 5.4z"/><path fill="#0B1520" d="M13.4 13.2c0-1.1.8-1.9 1.8-1.9s1.8.8 1.8 1.9-.8 1.9-1.8 1.9-1.8-.8-1.8-1.9zm3.6 0c0-1.1.8-1.9 1.8-1.9s1.8.8 1.8 1.9-.8 1.9-1.8 1.9-1.8-.8-1.8-1.9z"/><path fill="#0B1520" d="M16 16.2c.7 0 1.4.2 1.8.6l2.4 3.2-4.2-1.1-4.2 1.1 2.4-3.2c.4-.4 1.1-.6 1.8-.6z"/></svg><span>B16</span></div>
+    <div class="cell"><svg class="s16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M8 23 L16 6.5 L24 23 L20.6 23 L16 13.2 L11.4 23 Z"/><path fill="#C4A05A" d="M16 14.8 L26 20.4 L24.2 22.6 L16 18.2 L7.8 22.6 L6 20.4 Z"/></svg><span>C16</span></div>
+    <div class="cell"><svg class="s16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M9.2 7.2h8.6c3.8 0 6.4 2.2 6.4 5.6 0 2.6-1.4 4.4-3.8 5.2L26.6 25h-5.2l-5.4-6.6H14.4V25H9.2V7.2zm5.2 4.2v5.2h3.2c1.8 0 2.8-.8 2.8-2.6s-1-2.6-2.8-2.6H14.4z"/></svg><span>D16</span></div>
+    <div class="cell"><svg class="s16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M6.8 17.6c.6-5.8 5-10.4 11.2-10.4 2.4 0 4.4.6 6 1.8l4.4-2.2v6.4l-2.2.4c.4.8.6 1.8.6 2.8 0 4.8-3.6 8.2-8.6 8.2-3.2 0-5.6-1.2-7.4-3.2L6.6 23.6 6.8 17.6z"/><circle cx="16.6" cy="13.2" r="1.8" fill="#0B1520"/><path fill="#0B1520" d="M22.2 11.2c.8.4 1.6 1.2 2 2.2l3.4.6v-4.2l-3.2 1.2c-.6-.2-1.4-.2-2.2.2z"/></svg><span>E16</span></div>
+    <div class="cell"><svg class="s16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0B1520"/><path fill="#C4A05A" d="M5.5 22.5 16 6.8 26.5 22.5 22.8 22.5 16 11.8 9.2 22.5 Z"/></svg><span>F16</span></div>
+  </div>
+</body>
+</html>

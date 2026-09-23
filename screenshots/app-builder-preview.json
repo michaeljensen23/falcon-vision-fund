@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Falcon Vision Fund",
+      "hasCanvas": false,
+      "bodyTextLen": 277,
+      "bodyTextHash": "8dd9c76485ad4e2fe346f7e7e6b7099af7add899ba23d173f5567398c6e6de07",
+      "bodyTextPrefix": "FALCON VISION FUND I CONFIDENTIAL INVESTOR PRESENTATION DOWNLOAD",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Falcon Vision Fund",
+      "hasCanvas": false,
+      "bodyTextLen": 277,
+      "bodyTextHash": "8dd9c76485ad4e2fe346f7e7e6b7099af7add899ba23d173f5567398c6e6de07",
+      "bodyTextPrefix": "FALCON VISION FUND I CONFIDENTIAL INVESTOR PRESENTATION DOWNLOAD",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
