@@ -772,8 +772,9 @@ h2 {
 
 .alloc-grid {
   flex: 1;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -783,10 +784,10 @@ h2 {
 .alloc-grid li {
   background: var(--color-paper-2);
   border: 1px solid var(--color-line);
-  grid-template-columns: 48px 1fr auto;
+  grid-template-columns: 40px 1fr auto;
   align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
+  gap: 10px;
+  padding: 12px 12px;
   display: grid;
 }
 
@@ -832,7 +833,84 @@ h2 {
   font-family: var(--font-display);
   color: var(--color-gold);
   font-variant-numeric: tabular-nums;
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+.watch-note {
+  border-top: 1px solid var(--color-line);
+  align-items: baseline;
+  gap: 16px;
+  padding-top: 10px;
+  display: flex;
+}
+
+.watch-note strong {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  flex: none;
+  font-size: 0.62rem;
+}
+
+.watch-note span {
+  color: var(--color-ink);
+  font-size: 0.86rem;
+}
+
+.watch-slide {
+  grid-template-rows: auto 1fr;
+  gap: 22px;
+  height: 100%;
+  display: grid;
+}
+
+.watch-lead p {
+  max-width: 62ch;
+  color: var(--color-ink-soft);
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.watch-grid {
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+}
+
+.watch-grid li {
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-line);
+  border-left: 3px solid var(--color-gold);
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  display: grid;
+}
+
+.watch-grid strong {
+  color: var(--color-navy);
+  font-size: 1.05rem;
+  display: block;
+}
+
+.watch-grid p {
+  color: var(--color-ink-soft);
+  margin-top: 2px;
+  font-size: 0.82rem;
+}
+
+.co-photo-logo {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ——— Company slides ——— */
@@ -1051,8 +1129,8 @@ h2 {
   font-family: var(--font-display);
   color: var(--color-navy);
   margin-top: 4px;
-  font-size: 1.45rem;
-  line-height: 1.1;
+  font-size: 1.28rem;
+  line-height: 1.15;
 }
 
 .co-photo {
@@ -1074,6 +1152,8 @@ h2 {
 }
 
 .co-photo img {
+  position: absolute;
+  inset: 0;
   object-fit: cover;
   object-position: center;
   width: 100%;

@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Download } from "lucide-react";
-import { COMPANIES } from "@/lib/portfolio";
+import { HOLDINGS, WATCHLIST } from "@/lib/portfolio";
 import { CoverPage } from "./CoverPage";
 import { OverviewPage } from "./OverviewPage";
 import { AllocationsPage } from "./AllocationsPage";
 import { CompanyPage } from "./CompanyPage";
-import { TermsPage } from "./TermsPage";
+import { WatchListPage } from "./WatchListPage";
 import { CompanyLogo } from "./logos";
 
 const INTRO = 3;
-const CLOSING = 1;
-const TOTAL = INTRO + COMPANIES.length + CLOSING;
+const WATCH_AT = INTRO + HOLDINGS.length;
+const TOTAL = WATCH_AT + 1 + WATCHLIST.length;
 const SLIDE_W = 1280;
 const SLIDE_H = 720;
 
@@ -22,15 +22,28 @@ function isTypingTarget(target: EventTarget | null) {
 }
 
 function isFundSlide(index: number) {
-  return index < INTRO || index === TOTAL - 1;
+  return index < INTRO || index === WATCH_AT;
+}
+
+function companySlide(index: number) {
+  if (index >= INTRO && index < WATCH_AT) {
+    const holdingIndex = index - INTRO;
+    return { company: HOLDINGS[holdingIndex]!, holdingIndex, watch: false };
+  }
+  const watchStart = WATCH_AT + 1;
+  if (index >= watchStart && index < TOTAL) {
+    const holdingIndex = index - watchStart;
+    return { company: WATCHLIST[holdingIndex]!, holdingIndex, watch: true };
+  }
+  return null;
 }
 
 function slideTitle(page: number) {
   if (page === 0) return "Title";
   if (page === 1) return "Fund overview";
   if (page === 2) return "Target allocations";
-  if (page === TOTAL - 1) return "Summary of key terms";
-  return COMPANIES[page - INTRO]?.name ?? "";
+  if (page === WATCH_AT) return "Watch list";
+  return companySlide(page)?.company.name ?? "";
 }
 
 export function FundBook() {
@@ -158,7 +171,7 @@ export function FundBook() {
                   <img src="/brand/falcon.jpg" alt="" className="thumb-falcon" />
                 ) : (
                   <CompanyLogo
-                    slug={COMPANIES[i - INTRO]!.slug}
+                    slug={companySlide(i)!.company.slug}
                     className="thumb-logo"
                     compact
                   />
@@ -176,10 +189,18 @@ function Slide({ index }: { index: number }) {
   if (index === 0) return <CoverPage page={1} total={TOTAL} />;
   if (index === 1) return <OverviewPage page={2} total={TOTAL} />;
   if (index === 2) return <AllocationsPage page={3} total={TOTAL} />;
-  if (index === TOTAL - 1) return <TermsPage page={TOTAL} total={TOTAL} />;
-  const company = COMPANIES[index - INTRO];
-  if (!company) return null;
-  return <CompanyPage company={company} index={index - INTRO} total={TOTAL} />;
+  if (index === WATCH_AT) return <WatchListPage page={WATCH_AT + 1} total={TOTAL} />;
+  const slide = companySlide(index);
+  if (!slide) return null;
+  return (
+    <CompanyPage
+      company={slide.company}
+      index={slide.holdingIndex}
+      page={index + 1}
+      total={TOTAL}
+      watch={slide.watch}
+    />
+  );
 }
 
 export function PrintBook() {
@@ -188,10 +209,20 @@ export function PrintBook() {
       <CoverPage page={1} total={TOTAL} />
       <OverviewPage page={2} total={TOTAL} />
       <AllocationsPage page={3} total={TOTAL} />
-      {COMPANIES.map((c, i) => (
-        <CompanyPage key={c.slug} company={c} index={i} total={TOTAL} />
+      {HOLDINGS.map((c, i) => (
+        <CompanyPage key={c.slug} company={c} index={i} page={INTRO + i + 1} total={TOTAL} />
       ))}
-      <TermsPage page={TOTAL} total={TOTAL} />
+      <WatchListPage page={WATCH_AT + 1} total={TOTAL} />
+      {WATCHLIST.map((c, i) => (
+        <CompanyPage
+          key={c.slug}
+          company={c}
+          index={i}
+          page={WATCH_AT + 2 + i}
+          total={TOTAL}
+          watch
+        />
+      ))}
     </div>
   );
 }

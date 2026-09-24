@@ -1,4 +1,4 @@
-import { COMPANIES, formatWeight } from "@/lib/portfolio";
+import { HOLDINGS, WATCHLIST, formatWeight } from "@/lib/portfolio";
 import { CompanyLogo } from "./logos";
 import { PageShell } from "./PageShell";
 
@@ -8,10 +8,13 @@ export function AllocationsPage({ page, total }: { page: number; total: number }
       <div className="alloc-slide">
         <div className="alloc-intro">
           <h2>Target portfolio allocations</h2>
-          <p>Concentrated book of 11 late-stage holdings. Weights are targets and will flex with availability, pricing, and deal structure.</p>
+          <p>
+            Concentrated book of {HOLDINGS.length} late-stage holdings, ordered by target weight.
+            Weights flex with availability, pricing, and deal structure.
+          </p>
         </div>
         <ul className="alloc-grid">
-          {COMPANIES.map((c) => (
+          {HOLDINGS.map((c) => (
             <li key={c.slug} className={c.logoBleed ? "is-bleed" : undefined}>
               <span className="alloc-logo" aria-hidden>
                 <CompanyLogo slug={c.slug} compact />
@@ -24,6 +27,10 @@ export function AllocationsPage({ page, total }: { page: number; total: number }
             </li>
           ))}
         </ul>
+        <p className="watch-note">
+          <strong>Watch list</strong>
+          <span>{WATCHLIST.map((c) => c.name).join("  ·  ")}</span>
+        </p>
       </div>
     </PageShell>
   );

@@ -1,18 +1,29 @@
-import { companyClassName, companyHeroSrc, COMPANIES, formatWeight, type Company } from "@/lib/portfolio";
+import { useState } from "react";
+import { COMPANY_RESULTS, companyClassName, companyHeroSrc, HOLDINGS, formatWeight, type Company } from "@/lib/portfolio";
 import { CompanyLogo } from "./logos";
 
 export function CompanyPage({
   company,
   index,
+  page,
   total,
+  watch = false,
 }: {
   company: Company;
   index: number;
+  page: number;
   total: number;
+  watch?: boolean;
 }) {
-  const page = index + 4;
-  const kpis = company.metrics.filter((m) => m.label !== "Target weight").slice(0, 3);
+  const results = COMPANY_RESULTS[company.slug];
+  const kpis = [
+    { label: "Valuation", value: company.valuation },
+    { label: "2025 revenue", value: results?.revenue2025 ?? "Not disclosed" },
+    { label: "YoY revenue growth", value: results?.growth ?? "Not disclosed" },
+  ];
   const hero = companyHeroSrc(company.slug);
+  const [failedSlug, setFailedSlug] = useState<string | null>(null);
+  const showPhoto = Boolean(hero) && failedSlug !== company.slug;
   const slugClass = companyClassName(company.slug);
 
   return (
@@ -42,7 +53,9 @@ export function CompanyPage({
             </div>
             <div className="co-identity">
               <p className="co-kicker">
-                Holding {String(index + 1).padStart(2, "0")} of {COMPANIES.length}
+                {watch
+                  ? "Watch list"
+                  : `Holding ${String(index + 1).padStart(2, "0")} of ${HOLDINGS.length}`}
                 <span aria-hidden> · </span>
                 {company.sector}
               </p>
@@ -50,8 +63,8 @@ export function CompanyPage({
               <p className="co-line">{company.thesisLine}</p>
             </div>
             <div className="weight-mark">
-              <span>Target weight</span>
-              <p>{formatWeight(company.weight)}</p>
+              <span>{watch ? "Status" : "Target weight"}</span>
+              <p>{watch ? "Watch" : formatWeight(company.weight)}</p>
             </div>
           </div>
 
@@ -94,15 +107,18 @@ export function CompanyPage({
         </footer>
       </div>
 
-      <aside className="co-photo">
-        {hero ? (
+      <aside className="co-photo" style={showPhoto ? undefined : { background: company.accent }}>
+        {showPhoto ? (
           <img
             src={hero}
             alt=""
             decoding="async"
             draggable={false}
+            onError={() => setFailedSlug(company.slug)}
           />
-        ) : null}
+        ) : (
+          <CompanyLogo slug={company.slug} className="co-photo-logo" />
+        )}
       </aside>
     </article>
   );

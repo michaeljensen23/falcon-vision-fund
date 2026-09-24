@@ -167,6 +167,48 @@ export function FigureLogo({ className }: LogoProps) {
   );
 }
 
+export function LambdaLogo({ className }: LogoProps) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden>
+      <rect width="64" height="64" rx="10" fill="#111" />
+      <path fill="#fff" d="M18 50 30.2 16h5.2L24.6 40.2 42 50h-6.4L23.8 41.2 20.6 50H18Z" />
+    </svg>
+  );
+}
+
+export function SaronicLogo({ className }: LogoProps) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden>
+      <rect width="64" height="64" rx="10" fill="#0c2340" />
+      <path fill="#fff" d="M10 40h44l-6 6H16l-6-6Z" />
+      <path fill="none" stroke="#fff" strokeWidth="2.4" d="M14 32c6-6 10-6 16 0s10 6 16 0" />
+    </svg>
+  );
+}
+
+export function ShieldAiLogo({ className }: LogoProps) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden>
+      <rect width="64" height="64" rx="10" fill="#1a1a1a" />
+      <path
+        fill="#fff"
+        d="M32 12 48 18.5v14.2c0 9.2-6.4 16.6-16 19.3-9.6-2.7-16-10.1-16-19.3V18.5L32 12Z"
+      />
+      <path fill="#1a1a1a" d="M32 20 42 23.4v8.2c0 5.4-3.8 9.8-10 11.4-6.2-1.6-10-6-10-11.4v-8.2L32 20Z" />
+    </svg>
+  );
+}
+
+export function LightmatterLogo({ className }: LogoProps) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden>
+      <rect width="64" height="64" rx="10" fill="#0e0b1f" />
+      <path fill="#7cf0ff" d="M32 12 48 44H16L32 12Z" />
+      <path fill="#b8a4ff" d="M32 22 42 44H22L32 22Z" />
+    </svg>
+  );
+}
+
 const MAP = {
   databricks: DatabricksLogo,
   stripe: StripeLogo,
@@ -179,6 +221,10 @@ const MAP = {
   elevenlabs: ElevenLabsLogo,
   positron: PositronLogo,
   figure: FigureLogo,
+  lambda: LambdaLogo,
+  saronic: SaronicLogo,
+  "shield-ai": ShieldAiLogo,
+  lightmatter: LightmatterLogo,
 } as const;
 
 export function CompanyLogo({

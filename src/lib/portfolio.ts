@@ -54,18 +54,18 @@ export const FUND = {
     "Direct secondaries, tender participation, primary rounds, and strategic warehousing where available.",
   focus: "Scaled revenue, clear path to public liquidity, and institutional-grade governance.",
   exec: [
-    "Falcon Vision Fund I is a single book of late-stage private companies in artificial intelligence, defense autonomy, robotics, and aerospace.",
+    "Falcon Vision Fund I is a portfolio of late-stage private companies in artificial intelligence, defense autonomy, robotics, and aerospace.",
     "Each holding is a category leader still in private hands, at the point when access is scarce and a public listing has not yet reset who owns the business.",
     "The mandate is direct ownership of those companies — not a fund of funds, and not a basket of public proxies for the same themes.",
   ],
 };
 
-export const COMPANIES: Company[] = [
+const ROSTER: Company[] = [
   {
     slug: "databricks",
     name: "Databricks",
     thesisLine: "Conviction Data / AI Platform",
-    weight: 15,
+    weight: 19,
     sector: "Data Intelligence  ·  Enterprise AI",
     hq: "San Francisco, CA",
     founded: "2013",
@@ -88,7 +88,7 @@ export const COMPANIES: Company[] = [
       },
       {
         title: "Highest-conviction weight in the book",
-        body: "The Fund’s 15% core compounder: scaled, cash-generative, and the cleanest expression of production AI.",
+        body: "The Fund’s 19% core compounder: scaled, cash-generative, and the cleanest expression of production AI.",
       },
     ],
     catalysts: [
@@ -100,7 +100,7 @@ export const COMPANIES: Company[] = [
       { label: "Annual recurring revenue", value: "$7B+" },
       { label: "YoY growth", value: "~80%" },
       { label: "NDR", value: "140%+" },
-      { label: "Target weight", value: "15%" },
+      { label: "Target weight", value: "19%" },
     ],
   },
   {
@@ -149,7 +149,7 @@ export const COMPANIES: Company[] = [
     slug: "anduril",
     name: "Anduril",
     thesisLine: "Defense Autonomy & Hardware Standard",
-    weight: 12,
+    weight: 14,
     sector: "Defense autonomy  ·  Dual-use hardware",
     hq: "Costa Mesa, CA",
     founded: "2017",
@@ -172,7 +172,7 @@ export const COMPANIES: Company[] = [
       },
       {
         title: "Aligned with the Fund’s defense sleeve",
-        body: "Paired with Hadrian and Blue Origin, Anduril is the 12% autonomy standard inside the book.",
+        body: "Anduril is the 14% autonomy standard in the defense sleeve — software that becomes the system of record once it is on the mission.",
       },
     ],
     catalysts: [
@@ -184,14 +184,14 @@ export const COMPANIES: Company[] = [
       { label: "2025 revenue", value: "$2.2B" },
       { label: "Series H", value: "$5.0B" },
       { label: "Valuation", value: "$61B" },
-      { label: "Target weight", value: "12%" },
+      { label: "Target weight", value: "14%" },
     ],
   },
   {
     slug: "crusoe",
     name: "Crusoe",
     thesisLine: "Climate-Aligned AI Infrastructure Power",
-    weight: 10,
+    weight: 8,
     sector: "AI cloud  ·  Energy infrastructure",
     hq: "Denver, CO",
     founded: "2018",
@@ -226,7 +226,7 @@ export const COMPANIES: Company[] = [
       { label: "Valuation", value: "$30B" },
       { label: "Latest round", value: "$3B+" },
       { label: "Prior mark", value: "$10B (’25)" },
-      { label: "Target weight", value: "10%" },
+      { label: "Target weight", value: "8%" },
     ],
   },
   {
@@ -360,7 +360,7 @@ export const COMPANIES: Company[] = [
     slug: "kalshi",
     name: "Kalshi",
     thesisLine: "Regulated Prediction Markets",
-    weight: 8,
+    weight: 6,
     sector: "Event contracts  ·  Market infrastructure",
     hq: "New York, NY",
     founded: "2018",
@@ -396,7 +396,7 @@ export const COMPANIES: Company[] = [
       { label: "Last round", value: "$22B" },
       { label: "Talks", value: "~$40B" },
       { label: "Regulator", value: "U.S. CFTC" },
-      { label: "Target weight", value: "8%" },
+      { label: "Target weight", value: "6%" },
     ],
   },
   {
@@ -487,7 +487,7 @@ export const COMPANIES: Company[] = [
     slug: "figure",
     name: "Figure AI",
     thesisLine: "Autonomous Humanoid Robotics",
-    weight: 5,
+    weight: 7,
     sector: "Humanoid robotics  ·  Physical AI",
     hq: "San Jose, CA",
     founded: "2022",
@@ -511,7 +511,7 @@ export const COMPANIES: Company[] = [
       },
       {
         title: "Sized for convexity, not concentration",
-        body: "At a 5% portfolio allocation, this is the option on physical AGI. BMW is the de-risking event, not the end state.",
+        body: "At a 7% portfolio allocation, this is the option on physical AGI. BMW is the de-risking event, not the end state.",
       },
     ],
     catalysts: [
@@ -523,15 +523,233 @@ export const COMPANIES: Company[] = [
       { label: "Valuation", value: "$39B" },
       { label: "Series C", value: ">$1B" },
       { label: "BMW X3s built", value: "30,000+" },
-      { label: "Target weight", value: "5%" },
+      { label: "Target weight", value: "7%" },
+    ],
+  },
+  {
+    slug: "lambda",
+    name: "Lambda",
+    thesisLine: "AI Cloud & GPU Infrastructure",
+    weight: 10,
+    sector: "Neocloud  ·  AI infrastructure",
+    hq: "San Francisco, CA",
+    founded: "2012",
+    valuation: "$5.4B",
+    valuationNote: "Series E, November 2025",
+    status: "Private  ·  pre-IPO talks reported",
+    website: "lambda.ai",
+    accent: "#111111",
+    logoBg: "#111111",
+    logoBleed: true,
+    overview:
+      "A neocloud that buys Nvidia graphics processing units (GPUs) and rents them to labs and hyperscalers — including a multi-billion-dollar capacity agreement with Microsoft.",
+    thesis: [
+      {
+        title: "The pick-and-shovel beside the labs",
+        body: "Training and inference demand still outruns owned capacity. Lambda sells the cluster, not the model.",
+      },
+      {
+        title: "Contracted demand, not a speculative fleet",
+        body: "Microsoft expanded a multi-billion-dollar GPU agreement in November 2025. Debt facilities in 2026 fund chips already spoken for.",
+      },
+      {
+        title: "A public-market path is in view",
+        body: "The last priced round was $1.5 billion at a $5.4 billion post-money mark. Reported pre-IPO talks would be the next re-rating, not the underwriting case.",
+      },
+    ],
+    catalysts: [
+      "Microsoft GB300 capacity expansion",
+      "$1B chip-financing facilities closed in 2026",
+      "Reported pre-IPO raise ahead of a 2027 listing window",
+    ],
+    metrics: [
+      { label: "Last priced round", value: "$5.4B" },
+      { label: "Series E", value: "$1.5B" },
+      { label: "Counterparty", value: "Microsoft" },
+      { label: "Target weight", value: "10%" },
+    ],
+  },
+  {
+    slug: "saronic",
+    name: "Saronic",
+    thesisLine: "Autonomous Shipbuilding",
+    weight: 9,
+    sector: "Maritime autonomy  ·  Defense",
+    hq: "Austin, TX",
+    founded: "2022",
+    valuation: "$9.25B",
+    valuationNote: "Series D, March 2026",
+    status: "Private  ·  Navy production contract",
+    website: "saronic.com",
+    accent: "#0c2340",
+    logoBg: "#0c2340",
+    logoBleed: true,
+    overview:
+      "Builds autonomous surface vessels in American yards — from the 24-foot Corsair to the 180-foot Marauder — and sells them as a production line, not a prototype.",
+    thesis: [
+      {
+        title: "Shipbuilding is the scarce asset",
+        body: "Autonomy software is replicable. A yard that launches hulls in under a year is not. Saronic bought the industrial problem.",
+      },
+      {
+        title: "A program, not a demo",
+        body: "The U.S. Navy’s $392 million Corsair production contract is the proof that the small boat is already a program of record.",
+      },
+      {
+        title: "Re-rated with the defense complex",
+        body: "Series D raised $1.75 billion at $9.25 billion, more than double the $4 billion Series C a year earlier.",
+      },
+    ],
+    catalysts: [
+      "Marauder medium unmanned surface vessel in on-water trials",
+      "Franklin yard path to ~20 Marauders a year",
+      "Corsair production measured in thousands of hulls",
+    ],
+    metrics: [
+      { label: "Valuation", value: "$9.25B" },
+      { label: "Series D", value: "$1.75B" },
+      { label: "Navy contract", value: "$392M" },
+      { label: "Target weight", value: "9%" },
+    ],
+  },
+  {
+    slug: "shield-ai",
+    name: "Shield AI",
+    thesisLine: "Drone Defense Technology",
+    weight: 8,
+    sector: "Defense autonomy  ·  Aircraft",
+    hq: "San Diego, CA",
+    founded: "2015",
+    valuation: "$12.7B",
+    valuationNote: "Series G, March 2026",
+    status: "Private  ·  CCA autonomy provider",
+    website: "shield.ai",
+    accent: "#1a1a1a",
+    logoBg: "#1a1a1a",
+    logoBleed: true,
+    overview:
+      "Hivemind is the autonomy stack that flies aircraft when GPS and the data link are gone. V-BAT is the airframe. The U.S. Air Force Collaborative Combat Aircraft program is the customer.",
+    thesis: [
+      {
+        title: "Autonomy that works when the sky is jammed",
+        body: "Hivemind is built for denied navigation. That is the requirement, not a feature, on a modern battlefield.",
+      },
+      {
+        title: "Selected onto the Air Force’s drone wingman",
+        body: "Hivemind was named a Collaborative Combat Aircraft autonomy provider in February 2026 — the program that pairs drones with crewed fighters.",
+      },
+      {
+        title: "A full turn of the valuation in a year",
+        body: "Series G raised $1.5 billion at a $12.7 billion post-money mark, about 140% above the March 2025 round.",
+      },
+    ],
+    catalysts: [
+      "Collaborative Combat Aircraft flight-test cadence",
+      "V-BAT production and Coast Guard-class missions",
+      "Aechelon simulation acquisition beside Hivemind",
+    ],
+    metrics: [
+      { label: "Valuation", value: "$12.7B" },
+      { label: "Series G", value: "$1.5B" },
+      { label: "Prior mark", value: "$5.3B (’25)" },
+      { label: "Target weight", value: "8%" },
+    ],
+  },
+  {
+    slug: "lightmatter",
+    name: "Lightmatter",
+    thesisLine: "Photonic Interconnect for AI",
+    weight: 7,
+    sector: "Semiconductors  ·  Photonics",
+    hq: "Mountain View, CA",
+    founded: "2017",
+    valuation: "$4.4B",
+    valuationNote: "Series D, October 2024",
+    status: "Private  ·  Passage in qualification",
+    website: "lightmatter.co",
+    accent: "#5b4bff",
+    logoBg: "#0e0b1f",
+    logoBleed: true,
+    overview:
+      "Replaces copper between AI chips with light. Passage is a photonic interconnect — an interposer and near-package optics — so GPU clusters can scale without the power and fiber tax of electrical links.",
+    thesis: [
+      {
+        title: "The next bottleneck is the wire",
+        body: "Graphics processing units are no longer the only scarce part. Bandwidth and watts between them decide how large a training cluster can get.",
+      },
+      {
+        title: "Passage is a standard, not a science project",
+        body: "The L20 module joins the Open CPX ecosystem: bidirectional optics that cut fiber count roughly in half on a large GPU pod.",
+      },
+      {
+        title: "Sized as the semiconductor option",
+        body: "At 7%, Lightmatter is the book’s bet that photonics becomes the default interconnect before these companies are public.",
+      },
+    ],
+    catalysts: [
+      "Passage L20 evaluation kits targeted for early 2027",
+      "GlobalFoundries as the fabrication partner",
+      "Secondary marks above the $4.4 billion Series D",
+    ],
+    metrics: [
+      { label: "Series D", value: "$4.4B" },
+      { label: "Round size", value: "$400M" },
+      { label: "Product", value: "Passage" },
+      { label: "Target weight", value: "7%" },
     ],
   },
 ];
 
-export const TOTAL_WEIGHT = COMPANIES.reduce((s, c) => s + c.weight, 0);
+const HOLDING_ORDER = [
+  "databricks",
+  "anduril",
+  "stripe",
+  "lambda",
+  "saronic",
+  "shield-ai",
+  "crusoe",
+  "figure",
+  "lightmatter",
+  "kalshi",
+] as const;
+
+const WATCH_ORDER = ["ramp", "hadrian", "blue-origin", "elevenlabs", "positron"] as const;
+
+function bySlug(order: readonly string[]): Company[] {
+  return order.map((slug) => {
+    const company = ROSTER.find((item) => item.slug === slug);
+    if (!company) throw new Error(`Missing company ${slug}`);
+    return company;
+  });
+}
+
+export const HOLDINGS = bySlug(HOLDING_ORDER);
+export const WATCHLIST = bySlug(WATCH_ORDER);
+export const COMPANIES = HOLDINGS;
+
+export const TOTAL_WEIGHT = HOLDINGS.reduce((s, c) => s + c.weight, 0);
+
+/** 2025 revenue and year-over-year growth, same format on every company page. */
+export const COMPANY_RESULTS: Record<string, { revenue2025: string; growth: string }> = {
+  databricks: { revenue2025: "$4.8B", growth: "+55%" },
+  anduril: { revenue2025: "$2.2B", growth: "+120%" },
+  stripe: { revenue2025: "$6.8B", growth: "+33%" },
+  lambda: { revenue2025: "$760M", growth: "+79%" },
+  saronic: { revenue2025: "$200M", growth: "+1,500%" },
+  "shield-ai": { revenue2025: "$300M", growth: "+12%" },
+  crusoe: { revenue2025: "$500M", growth: "+81%" },
+  figure: { revenue2025: "Not disclosed", growth: "Not disclosed" },
+  lightmatter: { revenue2025: "Not disclosed", growth: "Not disclosed" },
+  kalshi: { revenue2025: "$264M", growth: "+998%" },
+  ramp: { revenue2025: "$1B", growth: "+110%" },
+  hadrian: { revenue2025: "Not disclosed", growth: "Not disclosed" },
+  "blue-origin": { revenue2025: "Not disclosed", growth: "Not disclosed" },
+  elevenlabs: { revenue2025: "$330M", growth: "+175%" },
+  positron: { revenue2025: "Not disclosed", growth: "Not disclosed" },
+};
 
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const HERO_SLUGS = new Set(COMPANIES.map((c) => c.slug));
+const HERO_SLUGS = new Set([...HOLDINGS, ...WATCHLIST].map((c) => c.slug));
 
 export function formatWeight(weight: number): string {
   return Number.isInteger(weight) ? `${weight}%` : `${weight.toFixed(1)}%`;
@@ -540,7 +758,8 @@ export function formatWeight(weight: number): string {
 /** Allowlisted hero path only — never interpolate an untrusted slug into a URL. */
 export function companyHeroSrc(slug: string): string | undefined {
   if (!SLUG_RE.test(slug) || !HERO_SLUGS.has(slug)) return undefined;
-  return `/heroes/${slug}.jpg`;
+  const v = slug === "lambda" || slug === "saronic" || slug === "shield-ai" || slug === "lightmatter" ? "?v=2" : "";
+  return `/heroes/${slug}.jpg${v}`;
 }
 
 export function companyClassName(slug: string): string {

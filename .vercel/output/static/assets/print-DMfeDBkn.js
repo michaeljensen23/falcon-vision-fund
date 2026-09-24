@@ -1,0 +1,1 @@
+import{n as e}from"./FundBook-CTqrH-QC.js";import{n as t}from"./index-ZugO5-0N.js";var n=t();function r(){return(0,n.jsx)(e,{})}export{r as component};
